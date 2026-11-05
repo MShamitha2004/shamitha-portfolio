@@ -1,0 +1,177 @@
+
+.hero {
+  min-height: 680px;
+  padding: 100px 7% 40px;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  column-gap: 50px;
+  background-color: #39452F;
+}
+
+.hero-content {
+  max-width: 680px;
+  z-index: 2;
+}
+
+.hero-eyebrow {
+  color: var(--olive);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(52px, 6.2vw, 88px);
+  line-height: 1.08;
+  font-weight: 500;
+  letter-spacing: -2px;
+  color: #FFFFFF;
+  margin-top: 0;
+}
+
+.hero h1 span {
+  color: var(--olive);
+  font-style: italic;
+}
+
+.hero-description {
+  max-width: 490px;
+  margin-top: 28px;
+  color: #FFFFFF;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.9;
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 35px;
+}
+
+.hero-primary-btn,
+.hero-secondary-btn {
+  padding: 15px 23px;
+  border-radius: 30px;
+  font-size: 12px;
+  transition: all 0.3s ease;
+  background: var(--olive);
+  color: white;
+  border: none;
+}
+
+.hero-primary-btn:hover,
+.hero-secondary-btn:hover {
+  background: var(--dark-olive);
+  transform: translateY(-3px);
+}
+
+.hero-location {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 45px;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.location-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--olive);
+}
+
+.hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.hero-image-placeholder {
+  width: 100%;
+  max-width: 410px;
+  aspect-ratio: 4 / 5;
+  background: var(--beige);
+  border-radius: 200px 200px 12px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--olive);
+  font-family: 'Playfair Display', serif;
+  font-size: 46px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.hero-side-note {
+  position: absolute;
+  right: -15px;
+  bottom: 35px;
+  background: var(--olive);
+  color: white;
+  padding: 18px;
+  font-size: 9px;
+  line-height: 1.8;
+  letter-spacing: 1px;
+}
+
+.hero-bottom {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  border-top: 1px solid rgba(115, 121, 87, 0.25);
+  padding-top: 25px;
+  margin-top: 55px;
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+}
+
+@media (max-width: 850px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 75px 6% 35px;
+  }
+
+  .hero-visual {
+    margin-top: 45px;
+  }
+
+  .hero-image-placeholder {
+    max-width: 340px;
+  }
+
+  .hero-side-note {
+    right: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero h1 {
+    font-size: 46px;
+    letter-spacing: -1px;
+  }
+
+  .hero-description {
+    font-size: 13px;
+  }
+
+  .hero-bottom {
+    font-size: 9px;
+  }
+}
