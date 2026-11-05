@@ -1,3 +1,4 @@
+
 import "./Projects.css";
 
 const projects = [
@@ -17,22 +18,23 @@ const projects = [
   },
   {
     number: "02",
-    category: "ARTIFICIAL INTELLIGENCE",
-    title: "DeepGen",
+    category: "MACHINE LEARNING & SUPPLY CHAIN",
+    title: "Supply Chain Demand Prediction System",
     description:
-      "A generative AI framework focused on image generation and enhancement using modern deep learning technologies.",
+      "Developed an end-to-end demand prediction application using the DataCo supply chain dataset, incorporating operational features such as order quantity, shipping delays, profit margins and seasonal indicators.",
     work: [
-      "Explored generative adversarial networks and image-generation workflows.",
-      "Worked with Stable Diffusion XL for image generation.",
-      "Integrated GFPGAN and Real-ESRGAN for image enhancement.",
-      "Used Next.js, React and Supabase for application development.",
+      "Integrated Random Forest, XGBoost and Neural Network models.",
+      "Built a FastAPI backend to generate real-time sales predictions using validated user inputs.",
+      "Implemented an analytics dashboard to monitor prediction trends and model usage.",
+      "Explored feature relationships and historical records to support data-driven operational insights.",
     ],
     tools: [
       "Python",
-      "PyTorch",
-      "Stable Diffusion XL",
-      "Next.js",
-      "Supabase",
+      "Random Forest",
+      "XGBoost",
+      "Neural Networks",
+      "FastAPI",
+      "Machine Learning",
     ],
   },
   {
@@ -61,7 +63,6 @@ function Projects() {
   return (
     <section className="projects-section" id="projects">
       <div className="projects-container">
-
         <div className="projects-heading">
           <span className="section-label">SELECTED WORK</span>
 
@@ -80,7 +81,6 @@ function Projects() {
         <div className="projects-grid">
           {projects.map((project) => (
             <article className="project-card" key={project.number}>
-
               <div className="project-top">
                 <span className="project-number">
                   {project.number}
@@ -92,7 +92,6 @@ function Projects() {
               </div>
 
               <div className="project-content">
-
                 <h3>{project.title}</h3>
 
                 <p className="project-description">
@@ -114,12 +113,10 @@ function Projects() {
                     <span key={index}>{tool}</span>
                   ))}
                 </div>
-
               </div>
             </article>
           ))}
         </div>
-
       </div>
     </section>
   );
